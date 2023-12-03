@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0px;
+        margin: 0px;}
+        body{
+            margin: 30px 60px;
+            background-color: #f7f7f7;
+            height: 340vh;
+        }
+        a i{
+    font-weight: 800;
+    color: black;
+    margin-top: -20px;
+    margin-left: -30px;
+    font-size: 35px;
+}
+p{
+    font-size: 23px;
+    line-height: 30px;
+}
+a i:hover{
+    color: gray;
+}
+img{
+
+    height: 70vh;
+}
+.courselist{
+    background-color: white;
+    width: 400px;
+    height: 380px;
+    position: relative;
+    top: -420px;
+    padding: 15px 10px;
+    left: 800px;
+    line-height: 55px;
+    font-size: 20px;
+    box-shadow: 2px 1px 13px skyblue;
+    border-radius: 25px;
+
+}
+.courselist i{
+    color: navy;
+    padding: 6px;
+
+}
+.courselist li{
+    list-style: none;
+}
+.courselist button{
+    padding: 8px 25px;
+    background-color: navy;
+    color: whitesmoke;
+    margin-top: 140px;
+    font-size: 15px;
+    border: none;
+border-radius: 4px;
+}
+.details{
+    background-color: white;
+    position: relative;
+    top: -400px;
+    line-height: 30px;
+    width: 70vw;
+    padding: 30px;
+    height: 39vh;
+    border-bottom: 1px solid black;
+}
+.details h1{
+    letter-spacing: 1px;
+}
+.details h5{
+    font-size: 20px;
+}
+.details p{
+    color: grey;
+    
+    font-size: 20px;
+}
+
+.img2{
+    margin-top: 0px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+h3{font-size: 30px;}
+.details h2{
+    margin-left: 130px;
+    margin-top: -90px;
+}
+.details-p{
+    margin-left: 130px;
+}
+.course-overview{
+    position: relative;
+    top: -490px;
+    width: 70vw;
+    padding: 30px;
+    background-color: white;
+    height: 60vh;
+    border-top: 1px solid black;
+}
+.course-overview p{
+    word-spacing: 3px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.learn-list{
+    position: relative;
+    top: -400px;
+    width: 70vw;
+    padding: 30px;
+    /* border: 10px solid red; */
+    background-color: white;
+    height: 215vh;
+}
+
+.learn-list li{
+    list-style: none;
+    font-size: 20px;
+    line-height: 50px;
+}
+.learn-list li h6{
+    font-size: 22px;
+    color: navy;
+    text-decoration: underline;
+}
+.learn-list p{
+
+font-size: 19px;
+}
+img{
+    width: 55vw;
+}
+@media only screen and (max-width: 768px){
+    a i{
+    font-weight: 800;
+    color: black;
+    margin-top: -50px;
+    margin-left: -30px;
+    font-size: 30px;
+}
+    img{
+margin-left: -5%;
+height: 55vh;
+width: 45vw;
+}
+.courselist{
+background-color: white;
+width: 36vw;
+position: absolute;
+top:10%;
+left: 50%;
+height: 300px;
+line-height: 45px;
+padding: 15px 10px;
+padding-top: 20px;
+font-size: 15px;
+box-shadow: 2px 1px 13px skyblue;
+border-radius: 25px;
+
+}
+.courselist i{
+color: navy;
+padding: 6px;
+
+}
+.courselist li{
+list-style: none;
+}
+.courselist button{
+padding: 5px 20px;
+background-color: navy;
+color: whitesmoke;
+font-size: 12px;
+}
+.details{
+position: relative;
+top: 100px;
+line-height: 30px;
+width: 79vw;
+left:-6%;
+padding: 30px;
+height: 42vh;
+border-bottom: 1px solid black;
+}
+.details h1{
+letter-spacing: 1px;
+font-size: 25px;
+}
+.details h5{
+font-size: 20px;
+}
+.details p{
+color: grey;
+
+font-size: 15px;
+}
+.details button{
+background-color: plum;
+color: white;
+padding: 10px 20px;
+font-size: 20px;
+border: none;
+position: absolute;
+top: -10px;
+left: 65%;
+}
+.img2{
+margin-top: 10px;
+margin-left:1px;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+}
+h3{font-size: 25px;}
+.details h2{
+margin-left: 110px;
+font-size: 20px;
+width: 200px;
+margin-top: -80px;
+}
+.details-p{
+margin-left: 130px;
+}
+.course-overview{
+position: relative;
+top: 500px;
+width: 70vw;
+padding: 30px;
+background-color: white;
+height: 60vh;
+border-top: 1px solid black;
+}
+.course-overview p{
+word-spacing: 3px;
+font-size: 20px;
+line-height: 30px;
+}
+
+.learn-list{
+position: relative;
+top: 100px;
+width: 79vw;
+left:-6%;
+padding: 30px;
+background-color: white;
+height: 275vh;
+}
+
+.learn-list li{
+list-style: none;
+font-size: 20px;
+line-height: 50px;
+}
+.learn-list li h6{
+font-size: 19px;
+color: navy;
+width: 300px;
+text-decoration: underline;
+}
+.learn-list p{
+
+font-size: 16px;
+}
+
+
+} 
+    
+@media only screen and (max-width: 400px){
+    a i{
+    font-weight: 800;
+    color: black;
+    margin-top: -50px;
+    margin-left: -30px;
+    font-size: 30px;
+}
+    img{
+margin-left: -5%;
+height: 55vh;
+width: 75vw;
+}
+.courselist{
+background-color: white;
+width: 75vw;
+position: absolute;
+top:70%;
+left:9%;
+height: 300px;
+line-height: 45px;
+padding: 15px 10px;
+padding-top: 20px;
+font-size: 15px;
+box-shadow: 2px 1px 13px skyblue;
+border-radius: 25px;
+
+}
+.courselist i{
+color: navy;
+padding: 6px;
+
+}
+.courselist li{
+list-style: none;
+}
+.courselist button{
+padding: 2px 7px;
+margin-top: 120px;
+background-color: navy;
+color: whitesmoke;
+font-size: 11px;
+}
+.details{
+position: relative;
+top: 380px;
+line-height: 30px;
+width: 72vw;
+left:-12%;
+padding: 30px;
+height: 38vh;
+border-bottom: 1px solid black;
+}
+.details h1{
+letter-spacing: 1px;
+font-size: 20px;
+}
+.details h5{
+font-size: 20px;
+}
+.details p{
+color: grey;
+
+font-size: 15px;
+}
+
+.img2{
+margin-top: 10px;
+margin-left: -5px;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+}
+h3{font-size: 22px;}
+.details h2{
+margin-left: 110px;
+font-size: 20px;
+width: 200px;
+margin-top: -80px;
+}
+.details-p{
+margin-left: 130px;
+}
+.course-overview{
+position: relative;
+top: 500px;
+width: 70vw;
+padding: 30px;
+background-color: white;
+height: 60vh;
+border-top: 1px solid black;
+}
+.course-overview p{
+word-spacing: 3px;
+font-size: 20px;
+line-height: 30px;
+}
+
+.learn-list{
+position: relative;
+top: 380px;
+width:72vw;
+left:-12%;
+padding: 30px;
+background-color: white;
+height: 315vh;
+}
+
+.learn-list li{
+list-style: none;
+font-size: 20px;
+line-height: 50px;
+}
+.learn-list li h6{
+font-size: 19px;
+color: navy;
+width: 300px;
+text-decoration: underline;
+}
+.learn-list p{
+
+font-size: 16px;
+}
+
+
+}  
+.popup-btn{
+	position: absolute!important;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.main-btn-rect,
+.main-btn-circle{
+	position: relative;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFF0;
+	background-color: rgb(252, 79, 79);
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 1px;	
+	outline: none;
+	cursor: pointer;
+	z-index: 100;
+}
+.main-btn-rect {
+	padding: 10px 80px;
+	line-height: 30px;
+}
+.main-btn-rect:before, 
+.main-btn-rect:after{
+  position: absolute;
+  content: '';
+  top:0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 240, 0.2);
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.main-btn-rect:before {
+  left: 0;
+}
+.main-btn-rect:after {
+  right: 0;
+}
+.main-btn-rect:hover:before, 
+.main-btn-rect:hover:after{
+  width: 50%;
+}
+.main-btn-circle{
+	height: 40px;
+	width: 40px;
+	-webkit-border-radius: 50%;
+	border-radius: 100%;
+	line-height: 40px;
+  -webkit-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.main-btn-circle:hover{   
+  -webkit-box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+  -moz-box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+  box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+}
+.popup{
+  position: fixed;
+	top: 100%;
+  width: 100%;
+  left: 0%;
+  height: 100%;
+  z-index: 10001;
+}
+.popup.active{
+  top:0;
+  background-color: rgba(3, 3, 3, 0.98); 
+  transition: background-color .6s ,opacity .6s;
+}
+.popup .main-btn-rect{
+  padding: 10px 100px;
+}
+.popup .popup-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 568px;
+  min-width: 320px;
+  margin-top: 150px;
+  padding: 25px;
+  background-color: #FFFFF0;
+  color: #070000;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transition: margin .6s;
+  -webkit-transition: margin .6s;
+  -moz-transition: margin .6s;
+  -o-transition: margin .6s;
+}
+.popup.active .popup-content{
+  margin-top: 0px;
+}
+.popup-content h6{
+  display: table;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px auto;
+  font-family: 'Roboto',sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;  
+}
+.form-group{
+	position: relative;
+	width: 90%;
+	margin: 0px auto;
+}
+form#send input, form#send textarea{
+	position: relative;
+	margin-bottom: 32px;
+	width: 100%;
+	height: 29px;
+	font-family: 'RobotoLight', sans-serif;
+	text-indent: 20px;
+  background-color: transparent;
+	outline: 0;
+	border: none;
+	border-bottom: 1px solid #070000;
+	-webkit-transition: border 0.6s;
+	-o-transition: border 0.6s;
+	transition: border 0.6s;
+}
+form#send input:focus,
+form#send textarea:focus{
+	border-bottom: 1px solid rgb(63, 173, 168); 
+}
+form#send label{
+	position: absolute;
+	top: 0;
+	line-height: 28px;
+	-webkit-transition: color .5s;
+	-o-transition: color .5s;
+	transition: color .5s;
+}
+form#send input:focus + label,
+form#send textarea:focus + label{
+  color:silver;
+}
+.form-group select{
+  height: 40px;
+  background-color: none;
+  border: none;
+  margin-left: 20px;
+}
+.form-group select option{
+  padding: 3px;
+  width: 200px;
+  height: 30px;
+}
+form#send .txt{
+	line-height: 22px;
+	left: 2px;
+}
+form#send .main-btn-rect {
+	position: relative;
+	display: block;
+	padding: 12px 80px;
+	margin: 0px auto;
+	font-size: 14px;
+}
+form#send .main-btn-rect i {
+	margin-right: 5px;
+}
+.popup .fade-out{
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+
+@media only screen and (max-width: 768px){
+  h1 {font-size: 25px;}
+  h2 {font-size: 14px;}
+  form#send .main-btn-rect {padding: 7px 60px; font-size: 14px;}
+  .popup-btn{padding: 7px 60px; font-size: 14px;}
+}
+  
+
+
+    </style>
+</head>
+<body>
+    
+    <br>
+    <a href="course.html"><i class="fa-solid fa-light fa-arrow-left"></i></a><br>
+    <img src="img_vs_code/multimedia.jpg" alt="java image"><div class="courselist">
+        <h3>This Course includes:</h3>
+        <li><i class="fa-solid fa-light fa-chalkboard-user"></i> Leactures : </li>
+        
+        <li><i class="fa-solid fa-light fa-clock"></i>  Duration :  </li>
+        <li><i class="fa-solid fa-light fa-home"></i>   Full lifetime access</li>
+        <li><i class="fa-solid fa-light fa-paperclip"></i>   Assignments</li>
+        <li><i class="fa-solid fa-light fa-award"></i>   Certificate of completion</li>
+      
+            <center>
+                <button type="button" class="main-btn-rect popup-btn" data-popup="popup-reg">Enroll Now</button>
+    
+    
+    
+            </center>
+            <div id="popup-reg" class="popup">
+                <div class="popup-content">
+                  <div class="event-header">
+                    <h6>Don't be shy, say hi!</h6>
+                  </div>
+                    <form id="send" class="send-form">
+                      <div class="form-group">
+                        <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+                        <label for="name">
+                       
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" placeholder="Enter phone..." id="phone" name="phone" required="required">
+                        <label for="phone">
+                         
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" placeholder="Enter mail..." id="mail" name="mail" required="required">
+                        <label for="mail">
+                         
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <textarea placeholder="Enter message..." name="text" id="text"></textarea>
+                        <label for="text" class="txt">
+                        
+                        </label>
+                      </div>
+                      <button type="submit" class="main-btn-rect" name="text" value="Send">
+                        <i class="fa fa-paper-plane"></i>Send</button>
+                    </form>
+                  <span class="fade-out main-btn-circle">╳</span>
+                </div>
+              </div>
+              
+    </div>
+    <div class="details">
+        <h1>Multiskill Program in Computer Application</h1>
+    <h5><i class="fa-solid fa-light fa-star" style="color: #edea3d;"></i><i class="fa-solid fa-light fa-star" style="color: #edea3d;"></i><i class="fa-solid fa-light fa-star" style="color: #edea3d;"></i><i class="fa-solid fa-light fa-star" style="color: #edea3d;"></i><i class="fa-sharp fa-regular fa-star" style="color: #f1ed1e;"></i></h5>
+    </a><br>
+<h3>Instructor</h3><br>
+<img src="img_vs_code/code6.jpg" alt="image for Instructor" class="img2">
+<h2>Prabhakar Bhardwaj</h2>
+<p class="details-p">HTML 5 Expert</p>
+</div>
+
+<div class="learn-list">
+<h3>What you'll Learn</h3><br><br>
+<li>
+    <h6>Advance Excel :</h6>
+<p>Advanced functions (macros, index, conditional list, arrays,
+
+    pivots, lookups) for most job descriptions.</p>
+</li><br>
+<li><h6>Manage Data effectively usin Office Access : </h6><p>Introduction to Ms.Power Point Customize, Presentation, working with Content , Text Formatting , Graphics, Charts, Slide Effects, Create Presentation to Video, Create Video, Info graphic Designing, Info graphics Animation etc.</p></li>
+<br>
+<li><h6>Photoshop :</h6><p>
+    Understand the basic database concepts. Build a new database with related
+    
+    tables
+    
+    Query a database using different methods and design forms and reports.</p></li>
+<br>
+<li><h6>Corel Draw :</h6><p>Corel Draw is a software program for editing vector graphics. Each object can be edited separately, meaning that the shape, colour, size and
+
+    position can be changed.</p></li>
+<br>
+<li><h6>Photoshop :</h6><p>Photoshop is a photo editing and raster graphic design software which allows users to create, edit and manipulate various graphics as well as digital art.</p></li>
+<br>
+<li><h6>Indesign :</h6><p>Indesign is a desktop publishing and typesetting software application
+
+    and it can be used to create works such as posters, flyers, brochures,
+    
+    magazines,
+    
+    newspapers, presentations, books and e books.</p></li>
+    <li><h6>Illalustrator</h6><p> Illustrator allows for the creation of everything from single design elements to entire compositions. Designers use Illustrator to create posters, symbols, logos, patterns, icons, etc.</p></li>
+<li><h6> Tally Prime with Taxation :</h6><p>Tally Accounting is a software used for financial accounting purpose It is provided by Tally Solutions and is a standard business accounting, inventory, payroll and MIS software.</p></li>
+<li><h6>HTML :</h6><p> HTML is the standard markup language for creating web pages. HTML
+
+    describes the structure of a web page. HTML elements tell the browser how to
+    
+    display the content.</p></li>
+
+ <li><h6>CSS :</h6><p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media. It can control the layout of multiple web pages all at once.</p></li>   
+ <li><h6>Java Script :</h6><p>Java Script is the Programming Language for the web. It can calculate, manipulate and validate data.</p></li>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+       $(document).ready(function(){
+  $('.popup-btn').click(function(){ 
+    var popupBlock = $('#'+$(this).data('popup'));
+    popupBlock.addClass('active')
+      .find('.fade-out').click(function(){
+        popupBlock.css('opacity','0').find('.popup-content').css('margin-top','350px');        
+        setTimeout(function(){
+          $('.popup').removeClass('active');
+          popupBlock.css('opacity','').find('.popup-content').css('margin-top','');
+        }, 600);
+      });
+ });
+});
+</script>
+</body>
+</html>

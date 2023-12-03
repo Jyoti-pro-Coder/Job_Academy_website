@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  
+    <script src=
+    "https://kit.fontawesome.com/457a315592.js"
+            crossorigin="anonymous">
+        </script>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+   
+      
+
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="logo"><h1>Job Academy</h1>
+    <h7>Learn With Confidence</h7>
+    </div>
+    <div class="push-left">
+      <button id="menu-toggler" data-class="menu-active" class="hamburger">
+        <span class="hamburger-line hamburger-line-top"></span>
+        <span class="hamburger-line hamburger-line-middle"></span>
+        <span class="hamburger-line hamburger-line-bottom"></span>
+      </button>
+  
+      <!--  Menu compatible with wp_nav_menu  -->
+      <ul id="primary-menu" class="menu nav-menu">
+        <li class="menu-item current-menu-item"><a class="nav__link"  href="home.html">Home</a></li>
+        <li class="menu-item dropdown"><a class="nav__link"  href="about.html">About</a>
+         
+  
+        </li>
+        
+        <li class="menu-item dropdown"><a class="nav__link"  href="course.html">Courses</a>
+      
+        </li>
+        <li class="menu-item "><a class="nav__link"  href="contact.html">Contact</a>
+         
+        </li>
+      </ul>
+  
+  
+    </div>
+  </nav>
+
+<!-- pop-up en  -->
+ <div class="header">
+ <h1>Contact Us</h1>
+ 
+ </div>
+  <div class="main"><br>
+    <div class="contact">
+<h2>Contact Information</h2><br>
+<div class="add">
+  <h3>Address</h3>
+<p><i class="fa-solid fa-light fa-location-dot"></i>    B-1/15A, Yamuna Vihar, Delhi - 110053</p>
+</div><br>
+<div class="call">
+  <h3>Phone No:</h3>
+  <p><i class="fa-solid fa-light fa-phone"></i>  
+9650329057 / 9910360393
+</div><br>
+<div class="container">
+  <h3>We are Social! :</h3>
+  <div class="con-detailss">
+  <a class="link linkedin">
+      <i class="fab fa fa-linkedin"></i>
+  </a>
+  <a class="link twitter">
+      <i class="fab fa fa-twitter"></i>
+  </a>
+  <a class="link github">
+      <i class="fab fa fa-github"></i>
+  </a>
+  <a class="link instagram">
+      <i class="fab fa fa-instagram"></i>
+  </a>
+  <a class="link youtube">
+      <i class="fab fa fa-youtube"></i>
+  </a>
+  <a class="link facebook">
+      <i class="fab fa fa-facebook-f"></i>
+  </a>
+</div>
+
+</div>
+
+
+
+    </div>
+  
+
+    
+
+    <div class="form-main">
+      <div class="main-wrapper">
+        <!-- <h2 class="form-head">Contact From</h2> -->
+        <form class="form-wrapper" action="transfer.php" method="POST">
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              required="required"
+            />
+            <label class="form-label" for="full_name">Full Name</label>
+          </div>
+
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              required="required"
+            />
+            <label class="form-label" for="email">Email</label>
+          </div>
+
+          <div class="form-card">
+            <select
+              class="form-input"
+              type="number"
+              name="select"
+              required="required"
+            >
+            <?php
+        
+            $conn = mysqli_connect("localhost","root","","jobacademy") or die("not coonect");
+        
+            $query = "SELECT * FROM course";
+        
+            $result = mysqli_query($conn,$query) or die("not select");
+        
+            while($row = mysqli_fetch_assoc($result)){
+        
+         
+            ?>
+                
+        
+        
+             <option value="<?php echo $row['cid'];  ?> "> <?php echo $row['course_name'];  ?> </option>   
+        
+        
+        <?php }
+        
+        mysqli_close($conn);
+        
+        ?>
+          </select>
+            <!-- <label class="form-label" for="phone_number">Choose course</label> -->
+          </div>
+
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="number"
+              name="phone"
+              required="required"
+            />
+            <label class="form-label" for="phone_number">Phone number</label>
+          </div>
+
+
+          <div class="form-card">
+            <textarea
+              class="form-textarea"
+              maxlength="430"
+              rows="3"
+              name="message"s
+              required="required"
+            ></textarea>
+            <label class="form-textarea-label" for="Course"
+              >Address</label
+            >
+          </div>
+          <div class="btn-wrap">
+            <button> Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+		<div class="map"><br>
+      <h2>Locate us on  Map</h2>
+			<!-- Google Map Copied Code -->
+			<iframe src=
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.605876144074!2d77.26866177550333!3d28.70143407562728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd2ea35e6b8b%3A0x12d3bf65cbd0e0ca!2sJob%20Academy%20%7C%20Tally%20%7C%20English%20%7C%20Busy%20%7C%20Institute%20in%20Yamuna%20Vihar%20%7C%20Delhi!5e0!3m2!1sen!2sin!4v1692709697987!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+			width="800"
+					height="300"
+					frameborder="10"
+					style="border:0;"
+					allowfullscreen="true"
+					aria-hidden="false"
+					tabindex="0">
+			</iframe>
+		</div>
+    </body>
+    <footer>
+      <div class="footer-main">
+      <div class="footer-content">
+      <h2>Job Academy</h2>
+      <h3>Education-Training-Placement</h3></div>
+      <div class="footer-content">
+        <ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="about.html">About us</a></li>
+  <li><a href="contact.html">Courses</a></li>
+  <li><a href="#gallery">Gallery</a></li>
+  <li><a href="#teaching-blog">Experts</a></li>
+  </ul>
+          </div>
+      <div class="footer-content">
+  <h4>Business Hours</h4>
+  
+      <table>
+      <tr><td> Mon : <td> 8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Tue : <td> 8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Wed : <td> 8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Thu : <td> 8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Fri&nbsp; : <td>8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Sat : <td> 8:00 AM</td><td>-</td><td>7:00 PM</td></tr>
+      <tr><td> Sun : <td>Closed</td></tr>
+  
+  </table>
+  
+  </div>
+  <div class="footer-content">
+      <h4>Address</h4>
+      <p>B-1/15A, Yamuna Vihar, Delhi-110053</p>
+      <br>
+      <h4>Phone No: </h4><p>9650329057 / 9910360393</p>
+  </div>
+  
+  </div>
+  <div class="copyright">
+    Copyright © 2008 - 2023 Job Academy, B-1/15A, Yamuna Vihar , Delhi | Website Developed by <a href=" http://www.instagram.com/its_jyoti_prajapati_"> Jyoti Rani</a>
+    </div>
+  </footer>
+<!-- cdn for responive nav  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <script>
+
+// Responsive nav 
+
+$(document).ready(function() {
+  // Toggle menu on click
+  $("#menu-toggler").click(function() {
+    toggleBodyClass("menu-active");
+  });
+
+  function toggleBodyClass(className) {
+    document.body.classList.toggle(className);
+  }
+
+ });
+
+let modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.getAttribute("data-modal");
+          document.getElementById(modal).style.display = "block";
+        };
+      });
+      let closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.closest(".modal");
+          modal.style.display = "none";
+        };
+      });
+      window.onclick = function (event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      };
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict';
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation');
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+      </script>
+</body>
+</html>
